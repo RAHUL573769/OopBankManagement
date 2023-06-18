@@ -41,7 +41,7 @@ def main():
 
     print(f"Total Bank Balance: {user4.totalBankBalance(bank)}")
     # print(f"Total Bank Loan: {bank.totalNumberBalance}")
-    print(f"Total Bank Loan: {user4.totalBankLoan(bank)}")
+    print(f"Total Bank Loan: {user4.total(bank)}")
     # print(f"Total Bank Loan: {bank.totalLoan}")
     user4.changeLoanAvailability(bank, False)
     print(f"Is loan available: {bank.isLoanAvailable}")
