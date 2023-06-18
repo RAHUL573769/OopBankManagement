@@ -4,21 +4,21 @@ from Admin import Admin
 
 
 def main():
-    bank = Bank("Baper Bank", "Uganda")
+    bank = Bank("myBank", "Srilanka")
 
     # adding user from bank
-    user1 = User("Chan Mia", "chan@mia.com", "1234", 1000)
+    user1 = User("my Mia", "my@mia.com", "1234", 1000)
     bank.addAmountToAccount(user1)
 
-    user2 = User("Kala Manik", "kala@manik.com", "45678", 5000)
+    user2 = User("manik", "mnik@manik.com", "45678", 5000)
     bank.addAmountToAccount(user2)
 
     # user can create account by themselves
-    user3 = User("Kopa Samsu", "kopa@samsu.com", "adbdsc", 7000)
+    user3 = User("Sanju", "sanju@samnsu.com", "adbdsc", 7000)
     user3.create_account(bank)
 
     # bank.list_accounts()
-    print("#############################################\n")
+    print("Bank List Accounts\n")
 
     # user can deposit money
     user1.deposit_money(bank, 1070)
@@ -36,7 +36,7 @@ def main():
 
     bank.makeAdmin(user1)
 
-    user4 = Admin("Yo Yo Kid", "yoyo@kid.com", "54967", 1000)
+    user4 = Admin("kid", "kid@kid.com", "54967", 1000)
     user4.createAdminAccount(bank)
 
     print(f"Total Bank Balance: {user4.totalBankBalance(bank)}")
