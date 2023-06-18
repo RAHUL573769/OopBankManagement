@@ -6,10 +6,10 @@ class Admin(User):
         super().__init__(name, email, password, balance)
 
     def createUserAccount(self, bank):
-        bank.add_account(self)
+        bank.addAmountToAccount(self)
 
     def createAdminAccount(self, bank):
-        bank.add_account(self)
+        bank.addAmountToAccount(self)
         self.role = "Admin"
 
     def makeAdmin(self, user):
@@ -18,14 +18,14 @@ class Admin(User):
         else:
             print("401 Unauthorized")
 
-    def totalBalance(self, bank):
+    def totalBankBalance(self, bank):
         if self.role == "Admin":
-            return bank.total_balance
+            return bank.totalNumberBalance
         else:
             return "401 Unauthorized"
 
     def totalBankLoan(self, bank):
-        return bank.total_loan
+        return bank.totalLoan
 
-    def changLoan(self, bank, is_loan_available=True):
-        bank.is_loan_available = is_loan_available
+    def changeLoanAvailability(self, bank, isLoanAvailable=True):
+        bank.isLoanAvailable = isLoanAvailable
