@@ -27,3 +27,5 @@ class Admin(User):
     def totalBankLoan(self, bank):
         return bank.total_loan
 
+    def changLoan(self, bank, is_loan_available=True):
+        bank.is_loan_available = is_loan_available
